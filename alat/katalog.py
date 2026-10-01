@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Buat katalog-latar.html: 24 latar kaca cair dalam satu halaman (pratinjau diam, klik = layar penuh bergerak).
-Pakai: python3 katalog.py <folder-aset> <keluaran.html>"""
+"""Buat katalog latar kaca cair dalam satu halaman (pratinjau diam, klik = layar penuh bergerak).
+Pakai: python3 katalog.py <folder-aset> <keluaran.html> [keluarga,keluarga …]
+Tanpa daftar keluarga: 24 latar bawaan (aurora, neon, air, mesh).
+Contoh bank tambahan: python3 katalog.py <aset> katalog-latar-holo-pagi.html holo,pagi"""
 import os, sys
 D = sys.argv[1]; baca = lambda f: open(os.path.join(D, f), encoding='utf-8').read()
 keluar = sys.argv[2]
-css = baca('kc-material.css') + baca('kc-latar.css')
-js = baca('kc-inti.js') + baca('kc-latar.js')
+KEL = sys.argv[3].split(',') if len(sys.argv) > 3 else ['aurora', 'neon', 'air', 'mesh']
+hp = any(k in ('holo', 'pagi') for k in KEL)
+css = baca('kc-material.css') + baca('kc-latar.css') + (baca('kc-latar-hp.css') if hp else '')
+js = baca('kc-inti.js') + baca('kc-latar.js') + (baca('kc-latar-hp.js') if hp else '')
+JUDUL = 'Katalog Latar Holografik &amp; Aurora Pagi' if hp else 'Katalog Latar Kaca Cair'
+JUMLAH = f'{12 * len(KEL) if hp else 24} latar · {len(KEL)} keluarga' 
 html = f"""<!doctype html><html lang="id" data-tingkat="penuh"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Katalog Latar Kaca Cair</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>{JUDUL}</title>
 <style>{css}
 html,body{{overflow:auto;height:auto;background:#101018;color:#eee;font-family:var(--kc-font)}}
 main{{max-width:1500px;margin:0 auto;padding:40px 24px 80px}}
@@ -27,10 +33,11 @@ h2{{font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#99a;marg
 #tutup{{position:fixed;right:20px;top:16px;z-index:10;display:none;font:600 16px var(--kc-font);padding:10px 18px;border-radius:99px;border:0;cursor:pointer}}
 #layar.buka + #tutup{{display:block}}
 </style></head><body>{baca('kc-filter.html')}
-<main><h1>Katalog Latar Kaca Cair</h1><p class="k">24 latar · 4 keluarga · semua murni CSS/SVG. Klik untuk melihat bergerak di layar penuh (Esc untuk menutup). Pakai id-nya di <code>data-latar</code>.</p><div id="isi"></div></main>
+<main><h1>{JUDUL}</h1><p class="k">{JUMLAH} · semua murni CSS/SVG. Klik untuk melihat bergerak di layar penuh (Esc untuk menutup). Pakai id-nya di <code>data-latar</code>.</p><div id="isi"></div></main>
 <div id="layar"></div><button id="tutup">Tutup ✕</button>
 <script>{js}
-const KEL={{aurora:'A · Aurora pastel',neon:'B · Malam / neon',air:'C · Alam & air',mesh:'D · Abstrak & mesh'}};
+const SEMUA={{aurora:'Aurora pastel',neon:'Malam / neon',air:'Alam & air',mesh:'Abstrak & mesh',holo:'Holografik',pagi:'Aurora Pagi'}};
+const KEL=Object.fromEntries({KEL!r}.map((k,i)=>[k,String.fromCharCode(65+i)+' · '+SEMUA[k]]));
 const kartu=(id,dek)=>{{const t=KC.latar.pasang(dek.firstChild,id);for(const k in t)dek.style.setProperty(k,t[k]);dek.dataset.kaca=KC.latar.kaca(id);}};
 const buatDek=(id,teks)=>{{const d=document.createElement('div');d.className='dek';d.append(document.createElement('div'));kartu(id,d);
   d.insertAdjacentHTML('beforeend',`<div class="kaca"><div class="t-label">${{KC.latar.daftar[id].nama}}</div><div class="t-judul">${{teks}}</div></div>`);return d;}};

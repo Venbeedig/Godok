@@ -1,0 +1,57 @@
+/* ==========================================================
+   KC NAMA TOMBOL — kartu anggota terbentuk dari pembawa kaca
+   ========================================================== */
+.grid-anggota[data-nt] > .kartu-anggota{opacity:0}
+.nt-lapis{position:absolute;inset:0;pointer-events:none;z-index:6;overflow:visible}
+.nt-pembawa{position:absolute;left:0;top:0;will-change:transform;filter:drop-shadow(0 10px 14px rgba(var(--kc-bayang,44,32,96),.28))}
+.nt-svg{width:100%;height:100%;overflow:visible;display:block}
+
+/* burung: dua sayap mengepak bergantian */
+.nt-sayap-a,.nt-sayap-b{transform-box:fill-box;transform-origin:50% 100%;animation:ntKepak .32s ease-in-out infinite alternate}
+.nt-sayap-b{animation-delay:-.16s}
+@keyframes ntKepak{from{transform:scaleY(1)}to{transform:scaleY(-.35)}}
+/* kupu-kupu */
+.nt-kepak{transform-box:view-box;transform-origin:50% 50%;animation:ntKupu .22s ease-in-out infinite alternate}
+@keyframes ntKupu{to{transform:scaleX(.25)}}
+/* ikan: ekor mengibas */
+.nt-ekor{transform-box:fill-box;transform-origin:100% 50%;animation:ntEkor .28s ease-in-out infinite alternate}
+@keyframes ntEkor{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
+/* ubur-ubur: berdenyut */
+.nt-denyut{animation:ntDenyut .7s ease-in-out infinite alternate;transform-origin:50% 30%}
+@keyframes ntDenyut{from{transform:scale(1.08,.9)}to{transform:scale(.94,1.08)}}
+/* bintang jatuh */
+.nt-kerlip{animation:ntKerlip .3s linear infinite alternate}
+@keyframes ntKerlip{to{transform:scale(.8) rotate(20deg)}}
+.nt-ekor-cahaya{position:absolute;right:50%;top:50%;width:260px;height:8px;margin-top:-4px;border-radius:8px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.95));filter:blur(1.5px)}
+
+/* tetes air */
+.nt-tetes{position:absolute;inset:0;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
+  background:radial-gradient(circle at 34% 64%,#fff 0 9%,rgba(255,255,255,.2) 26%,transparent 50%),
+    linear-gradient(180deg,color-mix(in srgb,var(--kc-aksen) 25%,rgba(255,255,255,.45)),rgba(255,255,255,.2));
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9),inset 0 -8px 12px -6px rgba(255,255,255,.8);
+  -webkit-backdrop-filter:blur(3px) saturate(180%);backdrop-filter:blur(3px) saturate(180%);
+  clip-path:polygon(50% 0,64% 22%,80% 44%,90% 64%,86% 84%,70% 97%,50% 100%,30% 97%,14% 84%,10% 64%,20% 44%,36% 22%)}
+/* kelopak mawar */
+.nt-kelopak{position:absolute;inset:0;border-radius:48% 48% 50% 50%/42% 42% 58% 58%;
+  background:radial-gradient(70% 42% at 50% 5%,rgba(255,255,255,.9),transparent 72%),linear-gradient(to top,#f394b0cc,#ffe8eecc);
+  box-shadow:inset 0 2px 1px #fff,inset 0 0 0 1.5px rgba(255,255,255,.6)}
+/* gelembung */
+.nt-gelembung{position:absolute;inset:0;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 6%,transparent 14%),radial-gradient(circle,transparent 56%,rgba(255,255,255,.35) 70%,transparent 72%);
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75)}
+.nt-gelembung::before{content:"";position:absolute;inset:0;border-radius:50%;opacity:.7;
+  background:conic-gradient(from 40deg,#ff9ad5,#9ad0ff,#b5ffd9,#fff59a,#ffb0e0,#a6c8ff,#ff9ad5);
+  -webkit-mask:radial-gradient(circle,transparent 62%,#000 67%,#000 70%,transparent 72%);mask:radial-gradient(circle,transparent 62%,#000 67%,#000 70%,transparent 72%)}
+/* kunang-kunang */
+.nt-kunang{position:absolute;inset:0;border-radius:50%;background:#fffbe0;
+  box-shadow:0 0 10px 4px color-mix(in srgb,var(--kc-aksen) 40%,#ffe9a0),0 0 24px 8px rgba(255,240,170,.55);animation:ntKedip .5s ease-in-out infinite alternate}
+@keyframes ntKedip{to{opacity:.55}}
+
+/* cincin riak, percikan, kilat */
+.nt-cincin{position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.95);box-shadow:0 0 22px rgba(255,255,255,.5),inset 0 0 18px rgba(255,255,255,.4)}
+.nt-cincin.nt-riak-besar{border-width:3px}
+.nt-cincin.nt-kilat{border:0;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,255,255,0) 60%)}
+.nt-percik{position:absolute;width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:inset 0 -2px 3px color-mix(in srgb,var(--kc-aksen) 40%,transparent)}
+
+[data-tingkat="hemat"] .nt-tetes{-webkit-backdrop-filter:none;backdrop-filter:none}

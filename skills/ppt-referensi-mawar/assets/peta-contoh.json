@@ -1,0 +1,326 @@
+{
+ "catatan": "Contoh peta untuk rakit_pptx.py. Mode mandiri memakai tipe/judul/latar/kartu/…; mode referensi memakai pola/isi/ganti_gambar (nama bentuk dari bedah_referensi.py). Pembuka & penutup holografik, isi materi aurora pagi.",
+ "judul_dek": "Bangun Ruang",
+ "font": "Segoe UI",
+ "anggota": [
+  {
+   "nama": "Nama Anggota 1",
+   "nim": "0000000001"
+  },
+  {
+   "nama": "Nama Anggota 2",
+   "nim": "0000000002"
+  },
+  {
+   "nama": "Nama Anggota 3",
+   "nim": "0000000003"
+  },
+  {
+   "nama": "Nama Anggota 4",
+   "nim": "0000000004"
+  },
+  {
+   "nama": "Nama Anggota 5",
+   "nim": "0000000005"
+  }
+ ],
+ "slide": [
+  {
+   "tipe": "sampul",
+   "pola": 1,
+   "latar": "holo-klasik",
+   "label": "Pendidikan Matematika SD · Modul 8",
+   "judul": "Bangun Ruang",
+   "sub": "Mengenal kubus, balok, prisma, limas, tabung, kerucut, dan bola, lalu membawanya ke kelas",
+   "isi": {
+    "Judul": "Bangun Ruang",
+    "Subjudul": "Pendidikan Matematika SD · Modul 8"
+   },
+   "ganti_gambar": "Logo",
+   "catatan": "Salam pembuka. Perkenalkan topik Modul 8."
+  },
+  {
+   "tipe": "kelompok",
+   "pola": 2,
+   "latar": "holo-mutiara",
+   "label": "Dipresentasikan oleh",
+   "judul": "Kelompok 5",
+   "info": [
+    "Pendidikan Matematika SD",
+    "Tutor: ⟨ISI SENDIRI⟩"
+   ],
+   "isi": {
+    "Judul": "Kelompok 5",
+    "Isi": [
+     "Mata kuliah: Pendidikan Matematika SD",
+     "Tutor: ⟨ISI SENDIRI⟩"
+    ]
+   }
+  },
+  {
+   "tipe": "anggota",
+   "pola": 2,
+   "latar": "holo-opal",
+   "label": "Anggota kelompok",
+   "judul": "Kami berlima",
+   "isi": {
+    "Judul": "Anggota Kelompok",
+    "Isi": [
+     "Nama Anggota 1 · NIM 0000000001",
+     "Nama Anggota 2 · NIM 0000000002",
+     "Nama Anggota 3 · NIM 0000000003",
+     "Nama Anggota 4 · NIM 0000000004",
+     "Nama Anggota 5 · NIM 0000000005"
+    ]
+   }
+  },
+  {
+   "tipe": "agenda",
+   "pola": 3,
+   "latar": "pagi-fajar",
+   "label": "Agenda",
+   "judul": "Yang akan kita bahas",
+   "butir": [
+    "Pengertian",
+    "Unsur",
+    "Jenis",
+    "Jaring-jaring",
+    "Volume"
+   ],
+   "isi": {
+    "Judul": "Yang akan kita bahas",
+    "Isi": [
+     "Pengertian",
+     "Unsur",
+     "Jenis",
+     "Jaring-jaring",
+     "Volume"
+    ]
+   }
+  },
+  {
+   "tipe": "banding",
+   "pola": 3,
+   "latar": "pagi-langit",
+   "label": "Pengertian",
+   "judul": "Bangun ruang punya isi",
+   "kolom": [
+    {
+     "judul": "Definisi",
+     "teks": "Bangun tiga dimensi yang dibatasi sisi-sisi, sehingga punya panjang, lebar, tinggi, dan volume."
+    },
+    {
+     "judul": "Datar atau ruang?",
+     "teks": "Persegi hanya punya panjang dan lebar. Kubus menambahkan tinggi, sehingga bisa diisi."
+    }
+   ],
+   "isi": {
+    "Judul": "Bangun ruang punya isi",
+    "Isi": [
+     "Bangun tiga dimensi yang dibatasi sisi-sisi, sehingga punya panjang, lebar, tinggi, dan volume.",
+     "Persegi hanya punya panjang dan lebar; kubus menambahkan tinggi."
+    ]
+   }
+  },
+  {
+   "tipe": "kartu",
+   "pola": 3,
+   "latar": "pagi-lavender",
+   "label": "Unsur bangun ruang",
+   "judul": "Sisi, rusuk, titik sudut",
+   "kartu": [
+    {
+     "judul": "Sisi",
+     "teks": "Bidang yang membatasi bangun ruang."
+    },
+    {
+     "judul": "Rusuk",
+     "teks": "Garis pertemuan dua sisi."
+    },
+    {
+     "judul": "Titik sudut",
+     "teks": "Titik pertemuan tiga rusuk atau lebih."
+    }
+   ],
+   "isi": {
+    "Judul": "Sisi, rusuk, titik sudut",
+    "Isi": [
+     "Sisi: bidang yang membatasi bangun ruang.",
+     "Rusuk: garis pertemuan dua sisi.",
+     "Titik sudut: titik pertemuan tiga rusuk atau lebih."
+    ]
+   }
+  },
+  {
+   "tipe": "banding",
+   "pola": 3,
+   "latar": "pagi-mentari",
+   "label": "Sisi datar",
+   "judul": "Kubus dan balok",
+   "kolom": [
+    {
+     "judul": "Kubus",
+     "teks": "6 sisi persegi yang sama besar, 12 rusuk sama panjang, 8 titik sudut."
+    },
+    {
+     "judul": "Balok",
+     "teks": "6 sisi persegi panjang (3 pasang sama besar), 12 rusuk, 8 titik sudut."
+    }
+   ],
+   "isi": {
+    "Judul": "Kubus dan balok",
+    "Isi": [
+     "Kubus: 6 sisi persegi sama besar, 12 rusuk sama panjang, 8 titik sudut.",
+     "Balok: 6 sisi persegi panjang, 12 rusuk, 8 titik sudut."
+    ]
+   }
+  },
+  {
+   "tipe": "banding",
+   "pola": 3,
+   "latar": "pagi-sakura",
+   "label": "Sisi datar",
+   "judul": "Prisma dan limas",
+   "kolom": [
+    {
+     "judul": "Prisma",
+     "teks": "Alas dan tutup sama besar dan sejajar; sisi tegaknya persegi panjang."
+    },
+    {
+     "judul": "Limas",
+     "teks": "Satu alas segi banyak; sisi tegaknya segitiga yang bertemu di titik puncak."
+    }
+   ],
+   "isi": {
+    "Judul": "Prisma dan limas",
+    "Isi": [
+     "Prisma: alas dan tutup sama besar dan sejajar.",
+     "Limas: sisi tegak segitiga bertemu di titik puncak."
+    ]
+   }
+  },
+  {
+   "tipe": "kartu",
+   "pola": 3,
+   "latar": "pagi-pelangi",
+   "label": "Sisi lengkung",
+   "judul": "Tabung, kerucut, bola",
+   "kartu": [
+    {
+     "judul": "Tabung",
+     "teks": "Dua sisi lingkaran dan satu selimut lengkung."
+    },
+    {
+     "judul": "Kerucut",
+     "teks": "Satu alas lingkaran, selimut lengkung, satu titik puncak."
+    },
+    {
+     "judul": "Bola",
+     "teks": "Satu sisi lengkung, tanpa rusuk dan titik sudut."
+    }
+   ],
+   "isi": {
+    "Judul": "Tabung, kerucut, bola",
+    "Isi": [
+     "Tabung: dua sisi lingkaran dan satu selimut lengkung.",
+     "Kerucut: alas lingkaran, selimut lengkung, satu titik puncak.",
+     "Bola: satu sisi lengkung, tanpa rusuk dan titik sudut."
+    ]
+   }
+  },
+  {
+   "tipe": "pernyataan",
+   "pola": 2,
+   "latar": "pagi-embun",
+   "label": "Jaring-jaring kubus",
+   "judul": "Ada 11 bentuk.",
+   "sub": "Sebelas susunan enam persegi yang bisa dilipat menjadi kubus. Ajak siswa menemukannya sendiri.",
+   "isi": {
+    "Judul": "Ada 11 bentuk.",
+    "Isi": "Sebelas susunan enam persegi yang bisa dilipat menjadi kubus. Ajak siswa menemukannya sendiri."
+   }
+  },
+  {
+   "tipe": "kisi",
+   "pola": 3,
+   "latar": "pagi-madu",
+   "label": "Rumus volume",
+   "judul": "Luas alas kali tinggi",
+   "butir": [
+    {
+     "judul": "Kubus",
+     "rumus": "s × s × s"
+    },
+    {
+     "judul": "Balok",
+     "rumus": "p × l × t"
+    },
+    {
+     "judul": "Prisma",
+     "rumus": "La × t",
+     "teks": "La = luas alas"
+    },
+    {
+     "judul": "Limas",
+     "rumus": "⅓ × La × t"
+    },
+    {
+     "judul": "Tabung",
+     "rumus": "π × r² × t"
+    },
+    {
+     "judul": "Kerucut",
+     "rumus": "⅓ × π × r² × t"
+    },
+    {
+     "judul": "Bola",
+     "rumus": "⁴⁄₃ × π × r³"
+    }
+   ],
+   "isi": {
+    "Judul": "Rumus volume",
+    "Isi": [
+     "Kubus: s × s × s",
+     "Balok: p × l × t",
+     "Prisma: La × t",
+     "Limas: ⅓ × La × t",
+     "Tabung: π × r² × t",
+     "Kerucut: ⅓ × π × r² × t",
+     "Bola: ⁴⁄₃ × π × r³"
+    ]
+   }
+  },
+  {
+   "tipe": "poin",
+   "pola": 3,
+   "latar": "pagi-jendela",
+   "label": "Di kelas SD",
+   "judul": "Mulai dari benda nyata",
+   "poin": [
+    "Kumpulkan kardus, kaleng, dan bola dari rumah.",
+    "Buka kardus menjadi jaring-jaring.",
+    "Isi kotak dengan kubus satuan untuk menghitung volume."
+   ],
+   "isi": {
+    "Judul": "Mulai dari benda nyata",
+    "Isi": [
+     "Kumpulkan kardus, kaleng, dan bola dari rumah.",
+     "Buka kardus menjadi jaring-jaring.",
+     "Isi kotak dengan kubus satuan untuk menghitung volume."
+    ]
+   }
+  },
+  {
+   "tipe": "penutup",
+   "pola": 4,
+   "latar": "holo-senja",
+   "judul": "Terima kasih.",
+   "sub": "Kelompok 5 · Pendidikan Matematika SD",
+   "isi": {
+    "Judul": "Terima kasih.",
+    "Subjudul": "Kelompok 5 · Pendidikan Matematika SD"
+   },
+   "ganti_gambar": "Logo"
+  }
+ ]
+}

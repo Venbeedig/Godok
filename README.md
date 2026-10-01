@@ -39,7 +39,7 @@ Setiap skill pecahan membawa file `assets/` (CSS/JS) yang **sudah diuji** di Chr
 ### Memasang di Claude.ai
 
 1. Unduh file di folder [`zip/`](zip/) — satu `.zip` per skill.
-2. Claude.ai → **Settings → Capabilities → Skills → Upload skill**, unggah ke-13 zip satu per satu (`kaca-cair-semua.zip` hanya arsip gabungan, bukan untuk diunggah).
+2. Claude.ai → **Settings → Capabilities → Skills → Upload skill**, unggah zip satu per satu (`kaca-cair-semua.zip` dan `mawar-kaca-baru.zip` hanya arsip gabungan, bukan untuk diunggah).
 3. Di percakapan baru, unggah materi presentasi lalu tulis misalnya: *"Buatkan PPT kelompok gaya kaca cair dari materi ini."*
 
 Di Claude Code, salin folder `skills/*` ke `.claude/skills/` proyek atau `~/.claude/skills/`.
@@ -60,4 +60,41 @@ Navigasi: → / Spasi maju · ← mundur · F layar penuh · T ganti tingkat efe
 ```bash
 python3 alat/bangun_galeri.py          # HTML dari aset di skills/
 python3 alat/bangun_galeri.py --pdf    # + PDF (butuh playwright, Pillow, pypdf)
+python3 alat/bangun_galeri.py --pptx   # + contoh .pptx mawar kaca (butuh playwright, python-pptx)
+python3 alat/kemas_zip.py              # zip per skill + arsip gabungan
 ```
+
+## Paket skill: Mawar Kaca (logo mawar, Holografik & Aurora Pagi)
+
+Enam skill tambahan yang memakai mesin kaca cair di atas. Logo kampus (mis. Universitas Terbuka) duduk di tengah **mawar kaca berlapis** yang mekar di slide pembuka, disusul slide **Kelompok** dan slide **Anggota** yang nama + NIM-nya dibentuk jadi tombol kaca oleh burung kaca (atau 11 efek lain). Judul tiap halaman bergerak berbeda-beda, latarnya Holografik dan Aurora Pagi. Keluarannya HTML kaca cair + PDF, dan **.pptx** yang meniru file presentasi referensi.
+
+| Isi paket | Jumlah |
+|---|---|
+| Latar baru: Holografik · Aurora Pagi | 12 · 12 |
+| Mawar kaca: varian kelopak × palet × cara mekar | 3 × 5 × 3, + mode pojok |
+| Efek nama anggota jadi tombol | 12 (N1–N12) |
+| Gerak judul per halaman | 12 (J1–J12), dibagi otomatis tanpa berulang |
+| Pertanyaan pilihan ganda sebelum membuat | 19 (HTML) · 10 (.pptx) |
+
+| Skill | Peran |
+|---|---|
+| `dirigen-ppt-mawar-kaca` | **induk HTML** — banyak pertanyaan pilihan ganda, BRIEF, merakit dengan `rakit_mawar.py`, uji, PDF, serah ke .pptx |
+| `ppt-referensi-mawar` | **induk .pptx** — bedah file referensi, salin slide-nya sebagai pola, ganti teks, pasang logo+mawar; cadangan mode mandiri |
+| `mawar-kaca-berlapis` | mawar 5 lapis (35 kelopak kaca) di belakang logo; ambil logo dari file LO; render PNG untuk .pptx |
+| `bank-latar-holo-pagi` | 24 latar baru (12 holo, 12 pagi) untuk `data-latar` |
+| `nama-tombol-kaca` | 12 efek pembawa: burung, tetes, kupu, koi, kelopak, gelembung, bintang, ubur, pesawat, riak, kristal, kunang |
+| `gerak-judul-kaca` | 12 gerak judul: naik pegas (seperti referensi), gulir, embun, ombak, tetes, kaca terisi, lensa, leleh, riak, gelembung, pantulan, tirai air |
+
+Unggah juga ke-13 skill kaca cair; paket ini memakai aset mereka. Zip: satu per skill di [`zip/`](zip/), `mawar-kaca-baru.zip` berisi keenamnya.
+
+### Galeri mawar kaca
+
+| File | Isi |
+|---|---|
+| [`galeri/galeri-mawar-kaca.html`](galeri/galeri-mawar-kaca.html) | dek contoh 13 slide "Bangun Ruang": sampul mawar, Kelompok, Anggota (burung kaca), materi, penutup |
+| [`galeri/galeri-varian-mawar.html`](galeri/galeri-varian-mawar.html) | 27 slide: 3 varian mawar, N1–N12, J1–J12 |
+| [`galeri/katalog-latar-holo-pagi.html`](galeri/katalog-latar-holo-pagi.html) | 24 latar holografik & aurora pagi; klik untuk melihat bergerak |
+| [`galeri/galeri-mawar-kaca.pdf`](galeri/galeri-mawar-kaca.pdf) | PDF dek contoh |
+| [`galeri/contoh-mawar-kaca.pptx`](galeri/contoh-mawar-kaca.pptx) | contoh .pptx mode mandiri (teks bisa diedit, animasi Zoom mawar) |
+
+Logo di galeri masih **inisial "UT"** sebagai pengganti: logo asli dipasang dari file LO dengan `ambil_logo.py`, tidak pernah digambar ulang. Isi Bangun Ruang di contoh adalah materi umum, bukan salinan file referensi.
