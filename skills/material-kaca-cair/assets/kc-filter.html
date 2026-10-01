@@ -1,0 +1,22 @@
+<svg class="kc-defs" width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <!-- goo berwarna: gumpal saling melebur, warna asli dipertahankan (lava, tetes berwarna) -->
+  <filter id="kc-goo-warna" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="b"/>
+    <feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -11" result="g"/>
+    <feComposite in="SourceGraphic" in2="g" operator="atop"/>
+  </filter>
+  <!-- goo kaca: bentuk melebur jadi gumpal susu tembus pandang + bibir terang + bayangan -->
+  <filter id="kc-goo-kaca" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b"/>
+    <feColorMatrix in="b" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 28 -12" result="bentuk"/>
+    <feGaussianBlur in="bentuk" stdDeviation="14" result="bb"/>
+    <feOffset in="bb" dy="16" result="bo"/>
+    <feColorMatrix in="bo" values="0 0 0 0 .17  0 0 0 0 .12  0 0 0 0 .38  0 0 0 .22 0" result="bayang"/>
+    <feMorphology in="bentuk" operator="erode" radius="2" result="dalam"/>
+    <feComposite in="bentuk" in2="dalam" operator="out" result="tepi"/>
+    <feColorMatrix in="bentuk" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0" result="isi"/>
+    <feMerge><feMergeNode in="bayang"/><feMergeNode in="isi"/><feMergeNode in="tepi"/></feMerge>
+  </filter>
+  <!-- blur vertikal untuk jejak gerak teks -->
+  <filter id="kc-blur-v" x="0" y="-50%" width="100%" height="200%"><feGaussianBlur stdDeviation="0 6"/></filter>
+</defs></svg>

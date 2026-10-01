@@ -1,0 +1,108 @@
+/* ==========================================================
+   KC LATAR — 24 latar hidup, murni CSS/SVG, tanpa file gambar
+   Lapisan dibangun oleh KC.latar.pasang(el, id) di kc-latar.js
+   ========================================================== */
+.latar{position:absolute;inset:0;overflow:hidden;isolation:isolate;pointer-events:none;z-index:0}
+.latar > *{position:absolute;pointer-events:none}
+.latar .lt-dasar{inset:0}
+
+/* gumpal warna yang melayang (semua latar) */
+.latar .lt-g{border-radius:50%;filter:blur(var(--b,90px));opacity:var(--o,.85);
+  will-change:transform;
+  animation:ltLayang var(--d,28s) ease-in-out infinite alternate;
+  animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltLayang{to{transform:translate(var(--tx,8%),var(--ty,-6%)) scale(var(--sk,1.14))}}
+
+/* pita gelombang aurora (seperti video) */
+.latar .lt-pita{left:0;width:200%;height:100%;top:0;will-change:transform;
+  filter:blur(var(--b,34px));opacity:var(--o,.6);
+  animation:ltGeser var(--d,70s) linear infinite;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltGeser{to{transform:translateX(-50%)}}
+
+/* ombak laut di bawah */
+.latar .lt-ombak{left:0;bottom:0;width:200%;height:var(--h,34%);will-change:transform;
+  animation:ltGeser var(--d,26s) linear infinite;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+
+/* tekstur turbulensi (kaustik, awan, kabut) — lapisan besar yang bergeser */
+.latar .lt-tekstur{left:-25%;top:-25%;width:150%;height:150%;background-repeat:repeat;
+  opacity:var(--o,.5);mix-blend-mode:var(--mb,normal);will-change:transform;
+  animation:ltHanyut var(--d,40s) ease-in-out infinite alternate;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltHanyut{to{transform:translate(var(--tx,6%),var(--ty,4%)) rotate(var(--rot,0deg))}}
+
+/* butir film / grain */
+.latar .lt-butir{inset:0;opacity:var(--o,.14);mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* bintang: satu elemen, banyak box-shadow */
+.latar .lt-bintang{left:0;top:0;width:2px;height:2px;border-radius:50%;background:transparent;
+  animation:ltKedip var(--d,5s) ease-in-out infinite alternate;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltKedip{from{opacity:.35}to{opacity:1}}
+
+/* tetes hujan di jendela */
+.latar .lt-tetes{width:var(--s);height:calc(var(--s)*1.18);border-radius:48% 52% 46% 54%/58% 56% 44% 42%;
+  background:
+    radial-gradient(circle at 34% 28%,rgba(255,255,255,.95) 0 7%,transparent 17%),
+    radial-gradient(circle at 50% 62%,rgba(255,255,255,.04) 0 48%,rgba(255,255,255,.28) 72%,rgba(10,14,24,.38) 100%);
+  box-shadow:0 2px 3px rgba(0,0,0,.35);opacity:var(--o,.9)}
+.latar .lt-tetes.jatuh{animation:ltLuncur var(--d,9s) cubic-bezier(.55,0,.75,.4) infinite;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltLuncur{0%,30%{transform:translateY(0)}100%{transform:translateY(1300px)}}
+
+/* hujan neon: garis miring berulang */
+.latar .lt-hujan{left:-10%;top:-100%;width:120%;height:200%;opacity:var(--o,.35);
+  background:repeating-linear-gradient(100deg,transparent 0 46px,var(--c,rgba(160,200,255,.55)) 46px 47.5px,transparent 47.5px 97px);
+  -webkit-mask:linear-gradient(transparent,#000 30%,#000 70%,transparent);mask:linear-gradient(transparent,#000 30%,#000 70%,transparent);
+  animation:ltHujan var(--d,1.6s) linear infinite;animation-delay:var(--dl,0s)}
+@keyframes ltHujan{to{transform:translate(-8%,50%)}}
+
+/* gelembung sabun naik */
+.latar .lt-gel{width:var(--s);height:var(--s);border-radius:50%;bottom:-260px;
+  animation:ltNaik var(--d,22s) linear infinite;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+.latar .lt-gel::before,.latar .lt-gel::after{content:"";position:absolute;inset:0;border-radius:50%}
+.latar .lt-gel::before{background:conic-gradient(from 40deg,#ff9ad5,#9ad0ff,#b5ffd9,#fff59a,#ffb0e0,#a6c8ff,#ff9ad5);
+  -webkit-mask:radial-gradient(circle,transparent 63%,#000 67%,#000 70%,transparent 71.5%);
+  mask:radial-gradient(circle,transparent 63%,#000 67%,#000 70%,transparent 71.5%);opacity:.75}
+.latar .lt-gel::after{background:
+  radial-gradient(circle at 32% 26%,rgba(255,255,255,.95) 0 5%,transparent 13%),
+  radial-gradient(circle at 70% 76%,rgba(255,255,255,.5) 0 3%,transparent 9%),
+  radial-gradient(circle,rgba(255,255,255,0) 55%,rgba(255,255,255,.22) 69%,transparent 71%)}
+@keyframes ltNaik{
+  0%{transform:translate(0,0)}25%{transform:translate(var(--sw,30px),-350px)}
+  50%{transform:translate(0,-700px)}75%{transform:translate(calc(var(--sw,30px)*-1),-1050px)}
+  100%{transform:translate(0,-1400px)}}
+
+/* bokeh */
+.latar .lt-bokeh{width:var(--s);height:var(--s);border-radius:50%;background:var(--c);
+  filter:blur(var(--b,6px));opacity:var(--o,.45);mix-blend-mode:screen;
+  animation:ltLayang var(--d,30s) ease-in-out infinite alternate;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+
+/* kisi perspektif (neon-grid & mesh-kisi) */
+.latar .lt-kisi{left:0;right:0;top:var(--hz,62%);bottom:0;overflow:hidden;
+  perspective:520px;perspective-origin:50% 0;
+  -webkit-mask:linear-gradient(transparent,#000 45%);mask:linear-gradient(transparent,#000 45%)}
+.latar .lt-kisi > i{position:absolute;left:-150%;width:400%;top:0;height:2600px;display:block;transform-origin:50% 0;
+  background:
+    linear-gradient(var(--c,rgba(255,56,100,.8)) 3px,transparent 3px) 0 0/120px 120px,
+    linear-gradient(90deg,var(--c,rgba(255,56,100,.8)) 3px,transparent 3px) 0 0/120px 120px;
+  transform:rotateX(78deg);animation:ltMaju var(--d,3s) linear infinite}
+@keyframes ltMaju{from{transform:rotateX(78deg) translateY(-120px)}to{transform:rotateX(78deg) translateY(0)}}
+.latar .lt-matahari{left:50%;top:var(--y,18%);width:var(--s,560px);height:var(--s,560px);margin-left:calc(var(--s,560px)/-2);border-radius:50%;
+  background:linear-gradient(#ffe259,#ff7e5f 55%,#ff3864);
+  -webkit-mask:linear-gradient(#000 54%,transparent 54%),repeating-linear-gradient(to bottom,#000 0 26px,transparent 26px 38px);
+  mask:linear-gradient(#000 54%,transparent 54%),repeating-linear-gradient(to bottom,#000 0 26px,transparent 26px 38px);
+  box-shadow:0 0 120px rgba(255,90,120,.6)}
+
+/* lava lamp: gumpal di dalam filter goo */
+.latar .lt-lava{inset:0;filter:url(#kc-goo-warna)}
+.latar .lt-lava > i{position:absolute;display:block;border-radius:50%;width:var(--s);height:var(--s);left:var(--x);
+  background:radial-gradient(circle at 40% 35%,var(--c2),var(--c));
+  animation:ltLava var(--d,24s) ease-in-out infinite alternate;animation-delay:calc(var(--dl,0s) + var(--lt-fase,0s))}
+@keyframes ltLava{from{transform:translateY(var(--y0))}to{transform:translateY(var(--y1))}}
+
+/* holografik: kerucut warna berputar */
+.latar .lt-holo{left:-40%;top:-80%;width:180%;height:260%;filter:blur(70px);opacity:var(--o,.75);
+  background:conic-gradient(from 0deg,#ffd1f0,#c7d2fe,#a5f3fc,#bbf7d0,#fef08a,#fecaca,#f5d0fe,#ffd1f0);
+  animation:ltPutar var(--d,50s) linear infinite;animation-delay:var(--lt-fase,0s)}
+@keyframes ltPutar{to{transform:rotate(1turn)}}
+
+/* hormati pengguna yang meminta gerak dikurangi */
+@media (prefers-reduced-motion:reduce){.latar *{animation:none!important}}

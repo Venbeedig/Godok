@@ -1,0 +1,38 @@
+/* ==========================================================
+   KC TATA LETAK — kerangka per tipe slide + blok isi
+   ========================================================== */
+/* ---------- kerangka tata letak ---------- */
+.tl-tengah{display:grid;place-items:center;text-align:center}
+.tl-tengah > .kolom{display:flex;flex-direction:column;align-items:center;gap:28px}
+.tl-dua{display:grid;grid-template-columns:1fr 1fr;gap:110px;align-items:center}
+.tl-dua.lebar-kiri{grid-template-columns:1.25fr 1fr}
+.tl-atas{display:flex;flex-direction:column;gap:56px}
+.tl-atas > .kepala{display:flex;flex-direction:column;gap:18px}
+.tl-atas > .badan{flex:1;display:flex;align-items:center;justify-content:center}
+.blok-teks{display:flex;flex-direction:column;gap:26px}
+.pil-label{display:inline-flex;align-self:flex-start;align-items:center;gap:12px;padding:12px 22px;--r:999px;font:650 17px/1 var(--kc-font);letter-spacing:.18em;text-transform:uppercase}
+.tl-tengah .pil-label{align-self:center}
+.kartu-isi{padding:44px 48px;--r:44px;display:flex;flex-direction:column;gap:16px}
+.kartu-isi h3{margin:0;font:720 38px/1.15 var(--kc-font);letter-spacing:-.02em}
+.kartu-isi p{margin:0;font:450 27px/1.45 var(--kc-font);color:var(--kc-teks-2)}
+.daftar-pustaka{list-style:none;margin:0;padding:48px 56px;--r:40px;display:flex;flex-direction:column;gap:22px;font:450 25px/1.45 var(--kc-font)}
+.daftar-pustaka li{padding-left:2.2em;text-indent:-2.2em}
+
+/* angka: kartu cincin */
+.kartu-data{--r:52px;display:grid;grid-template-columns:1fr 1fr;gap:20px 120px;padding:56px 90px 40px}
+.cincin-blok{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px}
+.cincin-blok b{font:650 30px/1.2 var(--kc-font)}
+.cincin-angka{position:absolute;top:0;left:50%;width:260px;height:260px;margin-left:-130px;display:grid;place-items:center;
+  font:780 52px/1 var(--kc-font);letter-spacing:-.03em;grid-auto-flow:column;justify-content:center;align-content:center}
+.sumber{grid-column:span 2;margin:10px 0 0;text-align:center;font:500 19px/1.3 var(--kc-font);color:var(--kc-teks-2)}
+
+/* kuis */
+.daftar-sakelar{--r:44px;width:1250px;padding:20px 26px}
+.daftar-sakelar .kc-baris-sakelar + .kc-baris-sakelar{border-top:1px solid color-mix(in srgb,var(--kc-teks) 12%,transparent)}
+
+/* galeri latar */
+.galeri-latar{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.gl-ubin{--r:22px;padding:8px;display:flex;flex-direction:column;gap:8px}
+.gl-mini{position:relative;width:100%;aspect-ratio:16/9;border-radius:15px;overflow:hidden}
+.gl-mini > .latar{width:1920px;height:1080px;transform:scale(.1285);transform-origin:0 0;inset:auto;left:0;top:0}
+.gl-ubin span{font:650 16px/1 var(--kc-font);padding:2px 6px 6px;color:var(--kc-teks)}

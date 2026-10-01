@@ -1,0 +1,14 @@
+/* KC MORPH */
+/* ---------- lapisan goo (gumpal susu) ---------- */
+.kc-goo{position:absolute;inset:0;z-index:6;pointer-events:none;filter:url(#kc-goo-kaca)}
+.kc-goo > *{position:absolute;display:block;background:#fff}
+[data-tingkat="hemat"] .kc-goo{filter:none}
+[data-tingkat="hemat"] .kc-goo > *{background:var(--kc-kaca-padat);box-shadow:0 10px 30px rgba(var(--kc-bayang),.2)}
+
+.kc-cincin-pop{position:absolute;width:240px;height:240px;border-radius:50%;pointer-events:none;z-index:7;
+  border:3px solid rgba(255,255,255,.9);box-shadow:0 0 22px rgba(255,255,255,.5),inset 0 0 22px rgba(255,255,255,.4)}
+/* M12 napas: gerak diam yang sangat halus untuk kaca yang menunggu */
+.kc-napas{animation:kcNapas 6s ease-in-out infinite alternate}
+@keyframes kcNapas{to{transform:scale(1.015) translateY(-3px)}}
+[data-tingkat="hemat"] .kc-napas{animation:none}
+@media (prefers-reduced-motion:reduce){.kc-napas{animation:none}}

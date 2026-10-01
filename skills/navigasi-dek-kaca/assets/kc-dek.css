@@ -1,0 +1,29 @@
+/* ==========================================================
+   KC DEK — slide & navigasi pil kaca
+   ========================================================== */
+.slide{position:absolute;inset:0;visibility:hidden;overflow:hidden;color:var(--kc-teks)}
+.slide.aktif,.slide.tampil{visibility:visible}
+.slide.aktif{z-index:2}.slide.tampil:not(.aktif){z-index:1}
+.slide > .isi{position:absolute;inset:0;z-index:2;box-sizing:border-box;padding:130px 150px 150px}
+/* sebelum koreografi masuk dimulai, elemen ber-data-masuk disembunyikan */
+.slide:not(.masuk) [data-masuk]{opacity:0}
+.kc-beku,.kc-beku *{animation-play-state:paused!important}
+.dek.kc-3d{perspective:2400px}
+
+/* ---------- navigasi pil kaca (wajib tampil di setiap slide) ---------- */
+.kc-nav{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:10px;
+  padding:9px;--r:999px;opacity:.72;transition:opacity .3s}
+.kc-nav:hover,.kc-nav:focus-within{opacity:1}
+.kc-nav button{all:unset;cursor:pointer;display:grid;place-items:center;height:54px;min-width:54px;border-radius:999px;
+  font:650 19px/1 var(--kc-font);color:var(--kc-teks);transition:background-color .25s,transform .4s var(--kc-pegas)}
+.kc-nav button:hover{background:rgba(var(--kc-sorot),.35)}
+.kc-nav button:active{transform:scale(.9)}
+.kc-nav button:focus-visible{outline:3px solid var(--kc-aksen);outline-offset:2px}
+.kc-nav .kc-ikon{font-size:26px}
+.kc-nav .kc-nav-maju{padding:0 24px 0 26px;gap:10px;grid-auto-flow:column;background:var(--kc-aksen)!important;color:#fff!important}
+.kc-titik{position:relative;display:flex;gap:10px;padding:0 10px;align-items:center;height:54px}
+.kc-titik i{width:10px;height:10px;border-radius:9px;background:color-mix(in srgb,var(--kc-teks) 28%,transparent);display:block}
+.kc-titik b{position:absolute;left:0;top:50%;height:10px;margin-top:-5px;border-radius:9px;background:var(--kc-teks)}
+.kc-nav .kc-nav-tingkat{font-size:15px!important;padding:0 16px;letter-spacing:.06em;color:var(--kc-teks-2)!important}
+[data-cetak] .kc-nav{display:none}
+
