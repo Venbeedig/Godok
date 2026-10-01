@@ -1,0 +1,56 @@
+/* ==========================================================
+   KC TATA MAWAR — tata letak khusus dek mawar kaca
+   (sampul bermawar, slide kelompok, agenda pil, kisi rumus, penutup)
+   Dimuat sesudah kc-tata-letak.css dan kc-mawar.css.
+   ========================================================== */
+/* sampul: mawar di kiri, judul di kanan */
+.sampul-mawar{left:30px;top:90px;transform:scale(.96);transform-origin:450px 450px}
+.sampul-teks{position:absolute;left:1000px;top:0;bottom:0;width:800px;display:flex;flex-direction:column;justify-content:center;gap:30px}
+.sampul-teks .t-raksasa{font-size:150px}
+.sampul-teks .t-sub{max-width:760px}
+.sampul-kaki{display:flex;gap:14px;flex-wrap:wrap}
+.sampul-kaki .pil-label{align-self:auto}
+
+/* penutup: mawar di tengah atas, kata penutup di bawah */
+.penutup-mawar{left:510px;top:-40px;transform:scale(.8);transform-origin:450px 450px}
+.penutup-teks{position:absolute;left:0;right:0;bottom:150px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.penutup-teks .t-raksasa{font-size:132px}
+
+/* slide kelompok */
+.kelompok-blok{display:flex;flex-direction:column;align-items:center;gap:30px;text-align:center}
+.kelompok-blok .t-raksasa{font-size:200px}
+.kelompok-info{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.kelompok-info .kaca{padding:20px 30px;--r:999px;font:600 26px/1.2 var(--kc-font);display:flex;gap:12px;align-items:center}
+.kelompok-info .kaca small{font:650 15px/1 var(--kc-font);letter-spacing:.2em;text-transform:uppercase;color:var(--kc-teks-2)}
+
+/* tombol anggota: kartu kaca berbentuk pil */
+.grid-anggota[data-nt]{gap:28px 30px}
+.grid-anggota[data-nt] .kartu-anggota{--r:999px;width:480px;padding:22px 36px 22px 24px}
+.grid-anggota[data-nt] .kartu-anggota b{font-size:29px}
+
+/* agenda pil bernomor */
+.agenda-mawar{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;max-width:1500px}
+.agenda-mawar .kaca{--r:999px;padding:24px 36px 24px 24px;display:flex;gap:18px;align-items:center;font:650 32px/1 var(--kc-font)}
+.agenda-mawar .kaca b{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;color:#fff;font:750 26px/1 var(--kc-font);
+  background:linear-gradient(135deg,var(--kc-aksen-2),var(--kc-aksen))}
+
+/* tiga kartu sejajar */
+.tiga-kartu{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;width:100%}
+.tiga-kartu .kartu-isi h3{font-size:42px}
+
+/* kisi rumus */
+.rumus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;width:100%}
+.rumus-grid .kaca{--r:34px;padding:28px 30px;display:flex;flex-direction:column;gap:10px}
+.rumus-grid b{font:700 30px/1.15 var(--kc-font)}
+.rumus-grid code{font:600 30px/1.2 var(--kc-mono);color:var(--kc-aksen);letter-spacing:-.01em}
+.rumus-grid small{font:500 20px/1.3 var(--kc-font);color:var(--kc-teks-2)}
+
+/* NIM sebaris di samping nama (pertanyaan 12, pilihan kedua): <div class="grid-anggota nim-samping" data-nt> — dua kolom pil lebar */
+.grid-anggota.nim-samping{max-width:1400px}
+.grid-anggota.nim-samping .kartu-anggota{width:660px;grid-template-columns:auto auto 1fr;grid-template-rows:auto;column-gap:22px}
+.grid-anggota.nim-samping .kartu-anggota .inisial{grid-row:auto}
+.grid-anggota.nim-samping .kartu-anggota b,.grid-anggota.nim-samping .kartu-anggota small{align-self:center}
+.grid-anggota.nim-samping .kartu-anggota small{justify-self:end}
+/* tombol tanpa lingkaran inisial (pertanyaan 13, pilihan kedua): cukup hapus <span class="inisial"> */
+.kartu-anggota:not(:has(.inisial)){grid-template-columns:1fr;padding-left:36px}
+.grid-anggota.nim-samping .kartu-anggota:not(:has(.inisial)){grid-template-columns:auto 1fr}
