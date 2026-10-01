@@ -1,0 +1,20 @@
+/* KC TRANSISI — lapisan efek (fx) */
+/* ---------- lapisan efek transisi ---------- */
+.kc-fx{position:absolute;inset:0;z-index:45;pointer-events:none;overflow:hidden}
+.kc-fx > *{position:absolute;left:0;top:0}
+.kc-fx-riak{width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;
+  border:3px solid rgba(255,255,255,.85);box-shadow:inset 0 0 24px rgba(255,255,255,.35),0 0 18px rgba(255,255,255,.25)}
+.kc-fx-cincin{border-radius:50%;transform:translate(-50%,-50%);
+  box-shadow:0 0 0 2px rgba(255,255,255,.85),inset 0 0 50px rgba(255,255,255,.45),0 0 50px rgba(255,255,255,.3)}
+.kc-fx-panel{top:-40px;width:2120px;height:1160px;--r:90px;--kc-blur:46px;--kc-kaca-isi:color-mix(in srgb,var(--kc-kaca-padat) 55%,transparent)}
+.kc-fx-bilah{height:1080px;--r:0px;--kc-blur:40px;--kc-kaca-isi:color-mix(in srgb,var(--kc-kaca-padat) 60%,transparent)}
+.kc-fx-retak{width:1920px;height:1080px;z-index:4}
+.kc-fx-retak line{stroke:rgba(255,255,255,.95);stroke-width:3;filter:drop-shadow(0 0 6px rgba(255,255,255,.9))}
+.kc-fx-wiper{top:-200px;width:180px;height:1480px;--r:90px;--kc-blur:30px}
+.kc-fx-pil{--kc-blur:44px;--kc-kaca-isi:color-mix(in srgb,var(--kc-kaca-padat) 60%,transparent)}
+.kc-fx-lensa{border-radius:50%;transform:translate(-50%,-50%);
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.9),inset 0 0 70px rgba(255,255,255,.5),0 0 70px rgba(255,255,255,.35)}
+.kc-fx-bingkai{left:210px;top:118px;width:1500px;height:844px;--r:64px;background:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  box-shadow:inset 0 0 0 10px rgba(255,255,255,.55),0 0 50px rgba(255,255,255,.3)!important}
+

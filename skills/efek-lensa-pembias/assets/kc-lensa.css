@@ -1,0 +1,16 @@
+/* KC LENSA */
+/* ---------- lensa pembias ---------- */
+.kc-lensa{position:absolute;left:0;top:0;z-index:5;overflow:hidden;border-radius:999px;pointer-events:none;
+  --kc-kaca-isi:color-mix(in srgb,var(--kc-kaca-padat) 66%,transparent);--kc-blur:30px;will-change:transform}
+.kc-lensa-isi{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+.kc-lensa-isi.prisma{filter:drop-shadow(2.5px 0 0 rgba(255,0,90,.45)) drop-shadow(-2.5px 0 0 rgba(0,170,255,.45))}
+.kc-lensa-isi.balik{filter:invert(1) hue-rotate(180deg)}
+.kc-lensa.gelap{--kc-kaca-isi:rgba(12,10,24,.74);--kc-sorot:255,255,255;--kc-kilap:.18}
+/* L10 cincin: hanya pembiasan tepi (Chromium, tingkat penuh) */
+[data-bias="ya"] .kc-lensa.cincin{--kc-kaca-isi:rgba(255,255,255,.04);-webkit-backdrop-filter:var(--kc-bias,) blur(1px) saturate(150%);backdrop-filter:var(--kc-bias,) blur(1px) saturate(150%)}
+[data-bias="ya"] .kc-lensa.cincin .kc-lensa-isi{visibility:hidden}
+.kc-lensa-klon{position:absolute;left:0;top:0;margin:0}
+
+.lensa-panggung{position:relative;display:inline-block;padding:10px 30px}
+.lensa-panggung > h1,.lensa-panggung > h2{margin:0}
+

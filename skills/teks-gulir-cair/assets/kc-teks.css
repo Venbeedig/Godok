@@ -1,0 +1,28 @@
+/* KC TEKS */
+/* ---------- teks gulir ---------- */
+.kc-gulir{display:inline-block;vertical-align:top;white-space:nowrap;clip-path:inset(-.04em -1em -.12em -1em)}
+.kc-kol{display:inline-block;position:relative;vertical-align:top;white-space:pre}
+.kc-rel{display:block;position:relative}
+.kc-hrf-baru{position:absolute;left:0}
+.kc-ukur{position:absolute;visibility:hidden;white-space:pre}
+
+/* ---------- odometer ---------- */
+.kc-odo{display:inline-flex;align-items:flex-start}
+.kc-odo-kol{display:inline-block;height:1.1em;line-height:1.1em;overflow:hidden;
+  -webkit-mask:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
+.kc-odo-pita{display:flex;flex-direction:column}
+.kc-odo-pita span{height:1.1em}
+
+/* ---------- ketik ---------- */
+.kc-ketik::after{content:"";display:inline-block;width:.08em;height:1em;margin-left:.06em;vertical-align:-.12em;
+  background:var(--kc-aksen);border-radius:2px;animation:kcKedip 1s steps(1) infinite}
+@keyframes kcKedip{50%{opacity:0}}
+
+/* ---------- huruf terpecah ---------- */
+.kc-h{display:inline-block;white-space:pre;transform-origin:50% 100%}
+
+/* ---------- kilau sekali lewat ---------- */
+.kc-kilau{background:linear-gradient(100deg,currentColor 40%,color-mix(in srgb,currentColor 20%,white) 50%,currentColor 60%) 0 0/250% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:kcKilau 1.3s var(--kc-cair) both}
+@keyframes kcKilau{from{background-position:100% 0}to{background-position:-50% 0}}
+

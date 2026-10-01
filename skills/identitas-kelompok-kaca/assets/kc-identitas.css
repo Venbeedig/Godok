@@ -1,0 +1,26 @@
+/* KC IDENTITAS KELOMPOK */
+/* identitas: kartu anggota (preset I2 ubin) */
+.grid-anggota{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:1500px}
+.kartu-anggota{--r:44px;width:440px;padding:30px 34px;box-sizing:border-box;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:24px;align-items:center}
+.kartu-anggota .inisial{grid-row:span 2;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;
+  font:750 30px/1 var(--kc-font);color:#fff;background:linear-gradient(135deg,var(--kc-aksen-2),var(--kc-aksen));box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.kartu-anggota b{font:700 32px/1.15 var(--kc-font);align-self:end}
+.kartu-anggota small{font:500 22px/1.3 var(--kc-font);color:var(--kc-teks-2);letter-spacing:.04em;align-self:start;font-variant-numeric:tabular-nums}
+
+/* I1/I4 tumpukan */
+.grid-anggota.tumpuk{flex-direction:column;align-items:center;gap:18px}
+.grid-anggota.tumpuk .kartu-anggota{width:880px}
+.id-pulau{top:110px}
+.id-pulau-ikon{font-size:48px;color:var(--kc-aksen)}
+.id-tumpuk-pulau{position:absolute;left:0;right:0;top:330px;margin:0 auto}
+/* I5 daftar formal */
+.daftar-formal{display:flex;flex-direction:column;align-items:center;gap:26px;padding:20px 50px}
+.daftar-formal .baris{display:flex;flex-direction:column;align-items:center;gap:4px}
+.daftar-formal b{font:680 40px/1.15 var(--kc-font)}
+.daftar-formal small{font:500 24px/1.2 var(--kc-font);color:var(--kc-teks-2);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+/* I6 tab anggota */
+.id-panggung{display:flex;flex-direction:column;align-items:center;gap:46px}
+.id-kartu-besar{--r:52px;min-width:900px;padding:50px 70px;text-align:center;display:flex;flex-direction:column;gap:10px}
+.id-nama{font:760 72px/1.05 var(--kc-font);letter-spacing:-.03em}
+.id-nim{font:550 32px/1.2 var(--kc-font);color:var(--kc-teks-2);letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.kc-tab.inisial .kc-tab-i{min-width:120px;font-size:26px;font-weight:750}
