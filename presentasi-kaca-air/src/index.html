@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentasi Kaca Air</title>
+<link rel="stylesheet" href="kc.css">
+</head>
+<body>
+<!--
+  CARA MENGUBAH ISI
+  Semua teks bertanda ⟨ … ⟩ adalah ISI SENDIRI. Ganti langsung di file ini.
+  Atribut penting per slide:
+    data-palet  : orchid | laguna | persik | kacalaut   (palet gradasi slide)
+    data-trans  : koi | ubur | paus | penyu | riak | pudar (transisi saat MASUK ke slide ini)
+    data-bagian : nama bagian yang tampil di pojok kiri bawah
+  Atribut elemen:
+    data-masuk  : naik | turun | kiri | kanan | skala | pudar  (gerak masuk)
+    data-ketuk  : urutan ketukan (1 ketuk = 0,5 detik)
+    data-pptx / data-nama : dipakai saat ekspor ke .pptx (biarkan saja)
+-->
+<div id="panggung">
+<div id="kanvas">
+<main class="dek">
+
+<!-- 1 · SAMPUL — logo UT dalam mawar kaca -->
+<section class="slide" data-palet="orchid" data-bagian="Pembuka" data-adegan="pembuka">
+  <div class="isi">
+    <div class="mawar-wadah" style="left:150px;top:90px" data-pptx="gambar" data-nama="mawar" data-masuk="adegan">
+      <div class="cincin-air"></div>
+      <div class="cakram"><img src="logo-ut.png" alt="Logo Universitas Terbuka"><span class="sapuan"></span></div>
+    </div>
+    <div class="kaca kartu-sampul" style="left:1030px;top:220px;width:770px;height:640px;padding:58px 60px" data-pptx="kaca" data-nama="kartu-utama" data-masuk="adegan">
+      <div class="pil" data-pptx="teks" data-nama="sampul-pil" data-masuk="naik" data-ketuk="0">Presentasi Kelompok ⟨No.⟩</div>
+      <h1 class="t-besar" style="margin-top:34px;font-size:78px" data-pptx="teks" data-nama="judul-utama" data-masuk="naik" data-ketuk="0.5">⟨Judul Materi Presentasi⟩</h1>
+      <div class="garis-aksen" style="width:150px;margin:34px 0 30px" data-pptx="gambar" data-masuk="kiri" data-ketuk="1"></div>
+      <p class="t-isi" data-pptx="teks" data-masuk="naik" data-ketuk="1.25">⟨Nama Mata Kuliah · Kode⟩</p>
+      <p class="t-kecil" style="margin-top:8px" data-pptx="teks" data-masuk="naik" data-ketuk="1.5">Tutor: ⟨Nama Tutor⟩</p>
+      <p class="t-kecil" style="margin-top:26px;font-size:23px" data-pptx="teks" data-masuk="naik" data-ketuk="1.75">Universitas Terbuka · ⟨UT Daerah⟩ · Masa ⟨2026.2⟩</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · IDENTITAS KELOMPOK -->
+<section class="slide" data-palet="orchid" data-trans="koi" data-bagian="Pembuka" data-adegan="identitas">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Identitas Kelompok</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">Kelompok ⟨No.⟩</h2></div>
+    </header>
+    <div class="kaca pil-info" style="right:120px;top:104px;height:74px;padding:0 34px;display:flex;align-items:center;border-radius:37px" data-pptx="kaca" data-masuk="turun" data-ketuk="0.5">
+      <p class="t-kecil" style="color:var(--tinta)" data-pptx="teks">⟨Nama Mata Kuliah⟩ · Tutor ⟨Nama Tutor⟩</p>
+    </div>
+    <div class="kaca ubin" style="left:170px;top:385px;width:500px;height:190px" data-pptx="kaca" data-nama="ubin-1" data-masuk="adegan">
+      <span class="inisial" data-pptx="gambar">01</span>
+      <div><div class="nama" data-pptx="teks">⟨Nama Anggota 1⟩</div><div class="nim" data-pptx="teks">NIM ⟨000000001⟩</div></div>
+    </div>
+    <div class="kaca ubin" style="left:710px;top:385px;width:500px;height:190px" data-pptx="kaca" data-nama="ubin-2" data-masuk="adegan">
+      <span class="inisial" data-pptx="gambar">02</span>
+      <div><div class="nama" data-pptx="teks">⟨Nama Anggota 2⟩</div><div class="nim" data-pptx="teks">NIM ⟨000000002⟩</div></div>
+    </div>
+    <div class="kaca ubin" style="left:1250px;top:385px;width:500px;height:190px" data-pptx="kaca" data-nama="ubin-3" data-masuk="adegan">
+      <span class="inisial" data-pptx="gambar">03</span>
+      <div><div class="nama" data-pptx="teks">⟨Nama Anggota 3⟩</div><div class="nim" data-pptx="teks">NIM ⟨000000003⟩</div></div>
+    </div>
+    <div class="kaca ubin" style="left:440px;top:625px;width:500px;height:190px" data-pptx="kaca" data-nama="ubin-4" data-masuk="adegan">
+      <span class="inisial" data-pptx="gambar">04</span>
+      <div><div class="nama" data-pptx="teks">⟨Nama Anggota 4⟩</div><div class="nim" data-pptx="teks">NIM ⟨000000004⟩</div></div>
+    </div>
+    <div class="kaca ubin" style="left:980px;top:625px;width:500px;height:190px" data-pptx="kaca" data-nama="ubin-5" data-masuk="adegan">
+      <span class="inisial" data-pptx="gambar">05</span>
+      <div><div class="nama" data-pptx="teks">⟨Nama Anggota 5⟩</div><div class="nim" data-pptx="teks">NIM ⟨000000005⟩</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · AGENDA — tiga kartu palet -->
+<section class="slide" data-palet="orchid" data-trans="koi" data-bagian="Pembuka">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Agenda</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">Alur presentasi kami</h2></div>
+    </header>
+    <div class="kartu-palet" data-palet="laguna" data-hewan="ubur" data-label="BAGIAN 01" data-judul="⟨Konsep Dasar⟩" style="left:245px;top:290px;transform:scale(.62)" data-pptx="gambar" data-nama="kartu-b1" data-masuk="naik" data-ketuk="0.5"></div>
+    <div class="kartu-palet" data-palet="persik" data-hewan="paus" data-label="BAGIAN 02" data-judul="⟨Pembahasan⟩" style="left:762px;top:290px;transform:scale(.62)" data-pptx="gambar" data-nama="kartu-b2" data-masuk="naik" data-ketuk="1"></div>
+    <div class="kartu-palet" data-palet="kacalaut" data-hewan="penyu" data-label="BAGIAN 03" data-judul="⟨Penutup⟩" style="left:1279px;top:290px;transform:scale(.62)" data-pptx="gambar" data-nama="kartu-b3" data-masuk="naik" data-ketuk="1.5"></div>
+  </div>
+</section>
+
+<!-- 4 · PEMBATAS BAGIAN 1 -->
+<section class="slide" data-palet="laguna" data-trans="ubur" data-bagian="Bagian 1 · ⟨Konsep Dasar⟩" data-besar>
+  <div class="isi">
+    <div class="kartu-palet" data-palet="laguna" data-hewan="ubur" data-label="BAGIAN 01" data-judul="⟨Konsep Dasar⟩" style="left:190px;top:95px;transform:scale(.96)" data-pptx="gambar" data-nama="kartu-b1" data-masuk="skala" data-ketuk="0"></div>
+    <div class="kaca" style="left:920px;top:240px;width:860px;height:600px;padding:62px 64px" data-pptx="kaca" data-nama="kartu-utama" data-masuk="kanan" data-ketuk="0.5">
+      <div class="pil" data-pptx="teks" data-nama="sampul-pil">Bagian 01</div>
+      <h2 class="t-besar" style="margin-top:30px" data-pptx="teks" data-nama="judul-utama">⟨Konsep Dasar⟩</h2>
+      <p class="t-isi" style="margin-top:26px" data-pptx="teks">⟨Satu kalimat tentang apa yang dibahas di bagian ini.⟩</p>
+      <div style="display:flex;gap:16px;margin-top:40px">
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">⟨Subtopik 1⟩</span>
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">⟨Subtopik 2⟩</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · DEFINISI -->
+<section class="slide" data-palet="laguna" data-trans="ubur" data-bagian="Bagian 1 · ⟨Konsep Dasar⟩">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 01 · Definisi</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">⟨Apa itu istilah kunci?⟩</h2></div>
+    </header>
+    <div class="kaca susu" style="left:120px;top:290px;width:1680px;height:620px;padding:64px 80px" data-pptx="kaca" data-nama="kartu-utama" data-masuk="naik" data-ketuk="0.5">
+      <div class="pil" data-pptx="teks">Definisi</div>
+      <h3 class="t-besar" style="margin-top:28px;font-size:104px" data-pptx="teks" data-nama="judul-utama">⟨Istilah Kunci⟩</h3>
+      <div class="garis-aksen" style="width:180px;margin:30px 0 32px" data-pptx="gambar"></div>
+      <p class="t-isi" style="font-size:38px;max-width:1380px" data-pptx="teks">⟨Tulis definisi 1–2 kalimat dari sumber utama, lalu jelaskan maknanya dengan bahasa kelompok sendiri.⟩</p>
+      <p class="t-kecil" style="margin-top:22px" data-pptx="teks">— ⟨Nama Penulis (Tahun), hlm. xx⟩</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · POIN PENTING -->
+<section class="slide" data-palet="laguna" data-trans="ubur" data-bagian="Bagian 1 · ⟨Konsep Dasar⟩">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 01 · Poin Penting</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">⟨Tiga hal yang perlu diingat⟩</h2></div>
+    </header>
+    <div class="kaca notif" style="left:260px;top:300px;width:1400px;height:160px" data-pptx="kaca" data-nama="poin-1" data-masuk="turun" data-ketuk="0.5">
+      <span class="nomor-bulat" data-pptx="gambar">1</span>
+      <p class="t-isi" data-pptx="teks">⟨Poin pertama, tulis maksimal 12 kata.⟩</p>
+      <span class="pil" data-pptx="teks">⟨Kata kunci⟩</span>
+    </div>
+    <div class="kaca notif" style="left:260px;top:490px;width:1400px;height:160px" data-pptx="kaca" data-nama="poin-2" data-masuk="turun" data-ketuk="1">
+      <span class="nomor-bulat" data-pptx="gambar">2</span>
+      <p class="t-isi" data-pptx="teks">⟨Poin kedua, tulis maksimal 12 kata.⟩</p>
+      <span class="pil" data-pptx="teks">⟨Kata kunci⟩</span>
+    </div>
+    <div class="kaca notif" style="left:260px;top:680px;width:1400px;height:160px" data-pptx="kaca" data-nama="poin-3" data-masuk="turun" data-ketuk="1.5">
+      <span class="nomor-bulat" data-pptx="gambar">3</span>
+      <p class="t-isi" data-pptx="teks">⟨Poin ketiga, tulis maksimal 12 kata.⟩</p>
+      <span class="pil" data-pptx="teks">⟨Kata kunci⟩</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · PEMBATAS BAGIAN 2 -->
+<section class="slide" data-palet="persik" data-trans="paus" data-bagian="Bagian 2 · ⟨Pembahasan⟩" data-besar>
+  <div class="isi">
+    <div class="kaca" style="left:140px;top:240px;width:860px;height:600px;padding:62px 64px" data-pptx="kaca" data-nama="kartu-utama" data-masuk="kiri" data-ketuk="0.5">
+      <div class="pil" data-pptx="teks" data-nama="sampul-pil">Bagian 02</div>
+      <h2 class="t-besar" style="margin-top:30px" data-pptx="teks" data-nama="judul-utama">⟨Pembahasan⟩</h2>
+      <p class="t-isi" style="margin-top:26px" data-pptx="teks">⟨Satu kalimat tentang apa yang dibahas di bagian ini.⟩</p>
+      <div style="display:flex;gap:16px;margin-top:40px">
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">⟨Subtopik 1⟩</span>
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">⟨Subtopik 2⟩</span>
+      </div>
+    </div>
+    <div class="kartu-palet" data-palet="persik" data-hewan="paus" data-label="BAGIAN 02" data-judul="⟨Pembahasan⟩" style="left:1110px;top:95px;transform:scale(.96)" data-pptx="gambar" data-nama="kartu-b2" data-masuk="skala" data-ketuk="0"></div>
+  </div>
+</section>
+
+<!-- 8 · PROSES / TAHAPAN -->
+<section class="slide" data-palet="persik" data-trans="paus" data-bagian="Bagian 2 · ⟨Pembahasan⟩" data-adegan="proses">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 02 · Tahapan</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">⟨Langkah-langkah utama⟩</h2></div>
+    </header>
+    <div class="jalur" style="left:310px;top:381px;width:1300px" data-pptx="gambar" data-masuk="adegan"><span class="isi-jalur"></span></div>
+    <span class="nomor-bulat simpul" style="left:310px;top:390px" data-pptx="gambar" data-masuk="adegan">1</span>
+    <span class="nomor-bulat simpul" style="left:743px;top:390px" data-pptx="gambar" data-masuk="adegan">2</span>
+    <span class="nomor-bulat simpul" style="left:1177px;top:390px" data-pptx="gambar" data-masuk="adegan">3</span>
+    <span class="nomor-bulat simpul" style="left:1610px;top:390px" data-pptx="gambar" data-masuk="adegan">4</span>
+    <div class="kaca langkah" style="left:110px;top:480px;width:400px;height:400px" data-pptx="kaca" data-nama="langkah-1" data-masuk="adegan">
+      <p class="t-label" data-pptx="teks">Langkah 01</p><h3 data-pptx="teks">⟨Nama langkah⟩</h3><p class="t-kecil" data-pptx="teks">⟨Penjelasan singkat, maksimal 10 kata.⟩</p>
+    </div>
+    <div class="kaca langkah" style="left:543px;top:480px;width:400px;height:400px" data-pptx="kaca" data-nama="langkah-2" data-masuk="adegan">
+      <p class="t-label" data-pptx="teks">Langkah 02</p><h3 data-pptx="teks">⟨Nama langkah⟩</h3><p class="t-kecil" data-pptx="teks">⟨Penjelasan singkat, maksimal 10 kata.⟩</p>
+    </div>
+    <div class="kaca langkah" style="left:977px;top:480px;width:400px;height:400px" data-pptx="kaca" data-nama="langkah-3" data-masuk="adegan">
+      <p class="t-label" data-pptx="teks">Langkah 03</p><h3 data-pptx="teks">⟨Nama langkah⟩</h3><p class="t-kecil" data-pptx="teks">⟨Penjelasan singkat, maksimal 10 kata.⟩</p>
+    </div>
+    <div class="kaca langkah" style="left:1410px;top:480px;width:400px;height:400px" data-pptx="kaca" data-nama="langkah-4" data-masuk="adegan">
+      <p class="t-label" data-pptx="teks">Langkah 04</p><h3 data-pptx="teks">⟨Nama langkah⟩</h3><p class="t-kecil" data-pptx="teks">⟨Penjelasan singkat, maksimal 10 kata.⟩</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · PERBANDINGAN -->
+<section class="slide" data-palet="persik" data-trans="paus" data-bagian="Bagian 2 · ⟨Pembahasan⟩">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 02 · Perbandingan</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">⟨A dibanding B⟩</h2></div>
+    </header>
+    <div class="kaca banding" style="left:120px;top:290px;width:790px;height:620px" data-pptx="kaca" data-nama="banding-a" data-masuk="kiri" data-ketuk="0.5">
+      <span class="pil" data-pptx="teks">⟨Sisi A⟩</span>
+      <h3 data-pptx="teks">⟨Nama A⟩</h3>
+      <ul class="daftar" data-pptx="daftar"><li>⟨Ciri pertama⟩</li><li>⟨Ciri kedua⟩</li><li>⟨Ciri ketiga⟩</li></ul>
+    </div>
+    <div class="kaca banding" style="left:1010px;top:290px;width:790px;height:620px" data-pptx="kaca" data-nama="banding-b" data-masuk="kanan" data-ketuk="0.5">
+      <span class="pil" data-pptx="teks">⟨Sisi B⟩</span>
+      <h3 data-pptx="teks">⟨Nama B⟩</h3>
+      <ul class="daftar" data-pptx="daftar"><li>⟨Ciri pertama⟩</li><li>⟨Ciri kedua⟩</li><li>⟨Ciri ketiga⟩</li></ul>
+    </div>
+    <div class="kaca vs" style="left:885px;top:525px" data-pptx="gambar" data-masuk="skala" data-ketuk="1.25">VS</div>
+  </div>
+</section>
+
+<!-- 10 · PEMBATAS BAGIAN 3 -->
+<section class="slide" data-palet="kacalaut" data-trans="penyu" data-bagian="Bagian 3 · ⟨Penutup⟩" data-besar>
+  <div class="isi">
+    <div class="kartu-palet" data-palet="kacalaut" data-hewan="penyu" data-label="BAGIAN 03" data-judul="⟨Penutup⟩" style="left:190px;top:95px;transform:scale(.96)" data-pptx="gambar" data-nama="kartu-b3" data-masuk="skala" data-ketuk="0"></div>
+    <div class="kaca" style="left:920px;top:240px;width:860px;height:600px;padding:62px 64px" data-pptx="kaca" data-nama="kartu-utama" data-masuk="kanan" data-ketuk="0.5">
+      <div class="pil" data-pptx="teks" data-nama="sampul-pil">Bagian 03</div>
+      <h2 class="t-besar" style="margin-top:30px" data-pptx="teks" data-nama="judul-utama">⟨Penutup⟩</h2>
+      <p class="t-isi" style="margin-top:26px" data-pptx="teks">⟨Satu kalimat tentang apa yang dibahas di bagian ini.⟩</p>
+      <div style="display:flex;gap:16px;margin-top:40px">
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">Kesimpulan</span>
+        <span class="pil" style="letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--tinta)" data-pptx="teks">Daftar Pustaka</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · KESIMPULAN -->
+<section class="slide" data-palet="kacalaut" data-trans="penyu" data-bagian="Bagian 3 · ⟨Penutup⟩">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul" data-masuk="turun" data-ketuk="0">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 03 · Kesimpulan</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">Yang kami simpulkan</h2></div>
+    </header>
+    <div class="kaca" style="left:120px;top:280px;width:520px;height:400px;padding:48px 46px" data-pptx="kaca" data-nama="simpul-1" data-masuk="naik" data-ketuk="0.5">
+      <span class="nomor-bulat" data-pptx="gambar"><svg viewBox="0 0 48 48"><path d="M12 25l8 8 16-18"/></svg></span>
+      <p class="t-isi" style="margin-top:34px" data-pptx="teks">⟨Kesimpulan pertama dalam satu kalimat.⟩</p>
+    </div>
+    <div class="kaca" style="left:700px;top:280px;width:520px;height:400px;padding:48px 46px" data-pptx="kaca" data-nama="simpul-2" data-masuk="naik" data-ketuk="1">
+      <span class="nomor-bulat" data-pptx="gambar"><svg viewBox="0 0 48 48"><path d="M12 25l8 8 16-18"/></svg></span>
+      <p class="t-isi" style="margin-top:34px" data-pptx="teks">⟨Kesimpulan kedua dalam satu kalimat.⟩</p>
+    </div>
+    <div class="kaca" style="left:1280px;top:280px;width:520px;height:400px;padding:48px 46px" data-pptx="kaca" data-nama="simpul-3" data-masuk="naik" data-ketuk="1.5">
+      <span class="nomor-bulat" data-pptx="gambar"><svg viewBox="0 0 48 48"><path d="M12 25l8 8 16-18"/></svg></span>
+      <p class="t-isi" style="margin-top:34px" data-pptx="teks">⟨Kesimpulan ketiga dalam satu kalimat.⟩</p>
+    </div>
+    <div class="kaca warna" style="left:120px;top:720px;width:1680px;height:180px;display:flex;align-items:center;justify-content:center;padding:0 60px" data-pptx="kaca" data-nama="inti" data-masuk="naik" data-ketuk="2">
+      <p class="t-judul" style="font-size:44px;text-align:center" data-pptx="teks">⟨Satu kalimat inti yang ingin diingat audiens.⟩</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · DAFTAR PUSTAKA (tenang, tanpa efek) -->
+<section class="slide" data-palet="kacalaut" data-trans="riak" data-bagian="Bagian 3 · ⟨Penutup⟩">
+  <div class="isi">
+    <header class="kaca kapsul" data-pptx="kaca" data-nama="kapsul">
+      <span class="swatch" data-pptx="gambar" data-nama="swatch"><i></i><i></i><i></i></span>
+      <div><p class="t-label" data-pptx="teks" data-nama="kapsul-label">Bagian 03 · Rujukan</p><h2 class="t-judul" data-pptx="teks" data-nama="kapsul-judul">Daftar Pustaka</h2></div>
+    </header>
+    <div class="kaca susu" style="left:120px;top:290px;width:1680px;height:620px;padding:64px 80px" data-pptx="kaca" data-nama="kartu-utama">
+      <ul class="pustaka" data-pptx="daftar" data-gaya="pustaka">
+        <li>⟨Penulis, A. A. (Tahun). <i>Judul buku materi pokok</i> (Edisi ke-x). Universitas Terbuka.⟩</li>
+        <li>⟨Penulis, B. (Tahun). Judul artikel. <i>Nama Jurnal, Volume</i>(Nomor), halaman. https://doi.org/xxxx⟩</li>
+        <li>⟨Penulis, C. (Tahun). <i>Judul buku</i>. Penerbit.⟩</li>
+        <li>⟨Nama Lembaga. (Tahun). <i>Judul dokumen</i>. URL⟩</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · PENUTUP -->
+<section class="slide" data-palet="orchid" data-trans="koi" data-bagian="Penutup" data-adegan="penutup" data-besar>
+  <div class="isi">
+    <div class="mawar-wadah" style="left:663px;top:58px;transform:scale(.66);transform-origin:0 0" data-pptx="gambar" data-nama="mawar" data-masuk="adegan">
+      <div class="cincin-air"></div>
+      <div class="cakram"><img src="logo-ut.png" alt="Logo Universitas Terbuka"><span class="sapuan"></span></div>
+    </div>
+    <div class="kaca" style="left:560px;top:690px;width:800px;height:160px;border-radius:80px;display:grid;place-items:center" data-pptx="kaca" data-nama="kartu-utama" data-masuk="naik" data-ketuk="1">
+      <h2 class="t-besar" style="font-size:92px" data-pptx="teks" data-nama="judul-utama">Terima kasih</h2>
+    </div>
+    <p class="t-kecil" style="position:absolute;left:260px;width:1400px;top:876px;text-align:center;color:var(--tinta)" data-pptx="teks" data-masuk="naik" data-ketuk="1.5">Kelompok ⟨No.⟩ · ⟨Judul Materi⟩ · Sesi tanya jawab kami buka</p>
+  </div>
+</section>
+
+</main>
+<div class="kc-fx" aria-hidden="true"></div>
+<div class="krom krom-kiri">Kelompok ⟨No.⟩ · Universitas Terbuka</div>
+<div class="krom krom-kanan">01 / 13</div>
+</div>
+</div>
+<script src="kc-hewan.js"></script>
+<script src="kc.js"></script>
+</body>
+</html>
